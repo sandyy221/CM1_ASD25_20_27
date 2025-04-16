@@ -9,8 +9,8 @@ public class MainBank {
         bank b3 = new bank("2101091003", "Rara Anjani", "Susi Susanti", "08127863783", "rara@gmail.com");
 
         transaksi t1 = new transaksi("T001", 2000000, 500000, 2500000, "2024-01-01", "debit", b1);
-        transaksi t2 = new transaksi("T002", 2500000, 1000000, 1500000, "2024-01-02", "kredit", b1);
-        transaksi t3 = new transaksi("T003", 1500000, 1000000, 2500000, "2024-01-03", "debit", b2);
+        transaksi t2 = new transaksi("T002",2500000, 1000000, 1500000, "2024-01-02", "kredit", b1);
+        transaksi t3 = new transaksi("T003",1500000, 1000000, 2500000, "2024-01-03", "debit", b2);
         transaksi t4 = new transaksi("T004", 2500000, 1500000, 1000000, "2024-01-04", "kredit", b2);
         transaksi t5 = new transaksi("T005", 1000000, 2000000, 3000000, "2024-01-05", "debit", b3);
         transaksi t6 = new transaksi("T006", 3000000, 500000, 2500000, "2024-01-06", "kredit", b3);
