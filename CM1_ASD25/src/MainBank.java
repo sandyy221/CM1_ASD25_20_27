@@ -25,39 +25,46 @@ public class MainBank {
         int pilihan;
         do {
             System.out.println("\n=== MENU ===");
-            System.out.println("1. Tampilkan Semua Transaksi");
-            System.out.println("2. Cari Transaksi berdasarkan Nama");
-            System.out.println("3. Transaksi Minimum (Debit/Kredit)");
-            System.out.println("4. Urutkan Transaksi berdasarkan Final Saldo (ASC)");
-            System.out.println("0. Keluar");
+            System.out.println("1. Data Norek");
+            System.out.println("2. Data Transaksi");
+            System.out.println("3. Search Data Nama");
+            System.out.println("4. Transaksi Minimum (Debit/Kredit)");
+            System.out.println("5. Urutkan Transaksi berdasarkan Final Saldo (ASC)");
+            System.out.println("6. Keluar");
             System.out.print("Pilih: ");
             pilihan = sc.nextInt();
             sc.nextLine();
 
             switch (pilihan) {
                 case 1:
+                System.out.printf("%-15s %-10s %-12s %-15s %-20s\n", "noRekening", "nama", "namaIbu", "noHp", "email");
+                b1.tampilDataNorek();
+                b2.tampilDataNorek();
+                b3.tampilDataNorek();
+                break;
+                case 2:
                     service.tampilSemuaTransaksi();
                     break;
-                case 2:
+                case 3:
                     System.out.print("Masukkan nama: ");
                     String nama = sc.nextLine();
                     service.cariTransaksiNama(nama);
                     break;
-                case 3:
+                case 4:
                     System.out.print("Cari minimal (debit/kredit): ");
                     String tipe = sc.nextLine();
                     service.transaksiMinimum(tipe);
                     break;
-                case 4:
+                case 5:
                     service.urutkanFinalSaldoAsc();
                     break;
-                case 0:
+                case 6:
                     System.out.println("Program selesai.");
                     break;
                 default:
                     System.out.println("Pilihan tidak tersedia.");
             }
-        } while (pilihan !=0);
+        } while (pilihan !=6);
     }
 }
  
