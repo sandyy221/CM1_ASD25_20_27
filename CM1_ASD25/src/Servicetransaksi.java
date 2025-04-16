@@ -7,6 +7,8 @@ public class Servicetransaksi {
         listTransaksi.add(t);
     }
     public void tampilSemuaTransaksi() {
+        System.out.printf("%-10s %-12s %-10s %-15s %-15s %-15s %-10s\n", 
+            "Kode", "No Rekening", "Saldo", "Debit/Kredit", "Final Saldo", "Tanggal", "Type");
         for (transaksi t : listTransaksi) {
             t.tampilDataTransaksi();
         }
