@@ -17,7 +17,6 @@ public class transaksi {
         this.type = type;
         this.bankAcc = bankAcc;
     }
-
     public void tampilDataTransaksi() {
         System.out.printf("%-10s %-15s %-10.2f %-10.2f %-10.2f %-15s %-10s\n",
             kodeTransaksi, bankAcc.noRekening, saldo, inOutSaldo, finalSaldo, tanggalTransaksi, type);
